@@ -1,0 +1,49 @@
+﻿@page "/Sponsor"
+
+@using GuardiansSophos.Services.Interfaces;
+@using GuardiansSophos.Entities;
+@inject IPatternsService _patternsService;
+
+
+<PageTitle>Sponsors</PageTitle>
+
+<section>
+     <div style="background-color: rgba(0, 0, 0, 0.5);">
+    <h2 style="color:white" >Patrocinadores</h2>
+
+    <table class="table table-striped table-hover table-bordered" style="background-color:white">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Monto</th>
+                <th>Origen de Monto</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Patterns in patternList)
+            {
+                <tr>
+                    <td>@Patterns.Name</td>
+                    <td>@Patterns.Amount</td>
+                    <td>@Patterns.OriginAmount</td>
+                    <th>
+                        <a style="border-radius: 20px" href="inforPattern/@Patterns.Id" class="btn btn-primary">
+                            Ver información del patrocinador
+                        </a>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+</section>
+
+@code
+{
+    List<Patterns> patternList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        patternList = await _patternsService.GetAll();
+    }
+}

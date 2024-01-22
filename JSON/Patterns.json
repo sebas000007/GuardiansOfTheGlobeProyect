@@ -1,0 +1,17 @@
+[
+    {
+        "Name" : "Lucas",
+        "Amount" : 100000000,
+        "OriginAmount" : "Lucas industrias"
+    },
+    {
+        "Name" : "Pedro",
+        "Amount" : 200000000,
+        "OriginAmount" : "Varios comercios"
+    },
+    {
+        "Name" : "Alfonzo",
+        "Amount" : 300000000,
+        "OriginAmount" : "Varias empresas"
+    }
+]

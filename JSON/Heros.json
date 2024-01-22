@@ -1,0 +1,42 @@
+[
+    {
+        "Name" : "Mark Greyson",
+        "Age": 16,
+        "Description": "Hero invencible",
+        "Habbilities": [
+            {
+                "id": 1,
+                "Name": "Volar",
+                "Description": "Poder volar"
+            },
+            {
+                "id": 2,
+                "Name": "Super velocidad",
+                "Description": "Poder correr a diferentes velocidades"
+            }
+        ],
+        "Weaknesses" : [
+            {
+                "id": 1,
+                "Name": "Sirconio",
+                "Description": "Material raro en el mundo"
+            }
+        ],
+        "Diaries" : [
+            {
+                "id" : "65ac1107e8496be290bbe581",
+                "InitHour" : "2024-01-20T10:00:00Z",
+                "EndHour" : "2024-01-20T11:00:00Z",
+                "NameActivity" : "Ir a la escuela",
+                "Description": "Ir a la escuela en la mañana",
+                "IdHero": ""
+            }
+        ],
+        "Patterns" : {
+            "id": "65ac11cfe8496be290bbe585",
+            "Name" : "Lucas",
+            "Amount" : 100000000,
+            "OriginAmount" : "Lucas industrias"
+        }
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "InitHour" : "2024-01-20T10:00:00Z",
+        "EndHour" : "2024-01-20T11:00:00Z",
+        "NameActivity" : "Ir a la escuela",
+        "Description": "Ir a la escuela en la mañana",
+        "IdHero": ""
+    },
+    {
+        "InitHour" : "2024-01-20T12:00:00Z",
+        "EndHour" : "2024-01-20T14:00:00Z",
+        "NameActivity" : "Ir a comprar cosas",
+        "Description": "Ir a la tienda a comprar cosas",
+        "IdHero": ""
+    },
+    {
+        "InitHour" : "2024-01-20T14:00:00Z",
+        "EndHour" : "2024-01-20T16:00:00Z",
+        "NameActivity" : "Ir a la lavanderia",
+        "Description": "Ir a la lavanderia a dejar el traje",
+        "IdHero": ""
+    }
+]

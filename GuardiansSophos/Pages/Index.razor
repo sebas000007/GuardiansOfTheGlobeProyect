@@ -1,0 +1,143 @@
+﻿@page "/"
+
+@using GuardiansSophos.Services.Interfaces;
+@using GuardiansSophos.Entities;
+@using System.Globalization
+@inject IHeroesService _herosService;
+
+
+<PageTitle>Guardians Heroes</PageTitle>
+
+<link rel="stylesheet" href="~/css/IndexStyles.css">
+
+<body style="background-image: url('https://imagecomics.com/legacy_images/blog_images/335834916022825.jpg'); background-size: cover; background-repeat: no-repeat; margin: 0; padding: 0">
+    <div style="background-color: rgba(0, 0, 0, 0.5);">
+        <div style="color: white; padding: 10px;">   
+    <header >
+    <h1>Guardians of the Globe App</h1>
+</header>
+
+<section>
+
+            <h2>Heroes</h2>
+
+    <h3>Filtros de busqueda</h3>
+
+    <div class="col-sm-12 row">
+        <label for="name" class="col-sm-2 col-form-label">Buscar por nombre:</label>
+        <div class="col-sm-6">
+            <input id="name" type="text" class="form-control mb-2 mt-2" @bind="@name" />
+        </div>
+        <div class="col-sm-4">
+            <button style="margin-top: 8px; border-radius: 20px" class="btn btn-primary ms-2 me-2" @onclick="GetHeroByName">Buscar por nombre</button>
+        </div>
+    </div>
+
+    <div class="col-sm-12 row">
+        <label for="initAge" class="col-sm-2 col-form-label">Buscar por edad:</label>
+            <div class="col-sm-3">
+                <input id="initAge" type="number" pattern="[0-9]" placeholder="0" class="form-control mb-2 mt-2" @bind="@initAge" />
+            </div>
+            <div class="col-sm-3">
+                <input id="endAge" type="number" pattern="[0-9]" placeholder="10000" class="form-control mb-2 mt-2" @bind="@endAge" />
+            </div>
+            <div class="col-sm-4">
+            <button style="margin-top: 8px; border-radius: 20px" class="btn btn-primary ms-2 me-2" @onclick="GroupByAge">Buscar por edad</button>
+            </div>
+    </div>
+
+    <div class="col-sm-12 row">
+        <label for="initAmount" class="col-sm-2 col-form-label">Buscar por Capital de los patrocinadores:</label>
+        <div class="col-sm-3">
+            <input id="initAmount" type="number" pattern="[0-9]" placeholder="0" class="form-control mb-2 mt-2" @bind="@initAmount" />
+        </div>
+        <div class="col-sm-3">
+            <input id="endAmount" type="number" pattern="[0-9]" placeholder="10000" class="form-control mb-2 mt-2" @bind="@endAmount" />
+        </div>
+        <div class="col-sm-4">
+            <button style="margin-top: 8px; border-radius: 20px" class="btn btn-primary ms-2 me-2" @onclick="SearchByAmount">Buscar por capital</button>
+        </div>
+    </div>
+
+    <button style="margin-top: 8px; border-radius: 20px" class="btn btn-danger ms-2 me-2 mb-2" @onclick="DeleteFilters">Eliminar filtros</button>
+
+
+    <table class="table table-striped table-hover table-bordered mt-1" style="background-color:white">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Descripcion</th>
+                <th>Patrocinador</th>
+                <th>Dinero Patrocinado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var hero in heroes)
+            {
+                <tr>
+                    <td>@hero.Name</td>
+                    <td>@hero.Age</td>
+                    <td>@hero.Description</td>
+                    <td>@hero.Patterns.Name</td>
+                    <td>@String.Format(new CultureInfo("en-US"), "{0:C}", @hero.Patterns.Amount) </td>
+                     <th>
+                        <a style="border-radius: 20px" href="infoHero/@hero.Id" class="btn btn-primary">
+                            Ver información del heroe
+                        </a>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+
+</div>
+    </div>
+
+</body>
+
+@code
+{
+    List<Heroes> heroes = new List<Heroes>();
+
+    string name = "";
+    int initAge = 0;
+    int endAge = 10000;
+    int initAmount = 0;
+    int endAmount = 1000000000;
+
+    protected override async Task OnInitializedAsync()
+    {
+        heroes = await _herosService.GetAll();
+    }
+
+    private async Task GetHeroByName()
+    {
+        if(name == "")
+            heroes = await _herosService.GetAll();
+        else
+            heroes = heroes.Where(h => h.Name.ToLower().Contains(name.ToLower())).ToList();
+    }
+
+    private void GroupByAge()
+    {
+        heroes = heroes.Where(h => h.Age >= initAge && h.Age <= endAge).ToList();
+    }
+
+    private void SearchByAmount()
+    {
+        heroes = heroes.Where(h => h.Patterns.Amount >= initAmount && h.Patterns.Amount <= endAmount).ToList();
+    }
+
+    private async Task DeleteFilters()
+    {
+        heroes = await _herosService.GetAll();
+        name = "";
+        initAge = 0;
+        endAge = 10000;
+        initAmount = 0;
+        endAmount = 1000000000;
+    }
+}

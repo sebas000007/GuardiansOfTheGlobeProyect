@@ -1,0 +1,72 @@
+[
+  {
+  "Name": "OmniMan",
+  "Age": 40,
+  "Description": "Super fuerte",
+  "Habbilities": [
+    {
+      "Name": "Volar",
+      "Description": "Poder volar",
+      "IdHabbility": 1
+    },
+    {
+      "Name": "Resistencia",
+      "Description": "Resistencia super humana",
+      "IdHabbility": 2
+    },
+    {
+      "Name": "Super fuerza",
+      "Description": "puede levantar mucho peso",
+      "IdHabbility": 3
+    }
+  ],
+  "Weaknesses": [],
+  "Diaries": [],
+  "Patterns": {
+    "Name": "Pedro",
+    "Amount": 200000000,
+    "OriginAmount": "Varios Comercios",
+    "IdParttern": "65ac11cfe8496be290bbe586"
+  }
+},
+{
+  "Name": "Brit",
+  "Age": 60,
+  "Description": "Super humano",
+  "Habbilities": [
+    {
+      "Name": "Invulnerable",
+      "Description": "No se puede romper los huesos",
+      "IdHabbility": 1
+    }
+  ],
+  "Weaknesses": [],
+  "Diaries": [],
+  "Patterns": {
+    "Name": "Alfonzo",
+    "Amount": 300000000,
+    "OriginAmount": "Varias empresas",
+    "IdParttern": "65ac11cfe8496be290bbe587"
+  }
+},
+{
+  "Name": "El inmortal",
+  "Age": 1000,
+  "Description": "Tiene inmortabiliad",
+  "Habbilities": [
+    {
+      "Name": "No puede morir",
+      "Description": "Nada lo puede matar",
+      "IdHabbility": 1
+    }
+  ],
+  "Weaknesses": [],
+  "Diaries": [],
+  "Patterns": {
+    "Name": "Alfonzo",
+    "Amount": 300000000,
+    "OriginAmount": "Varias empresas",
+    "IdParttern": "65ac11cfe8496be290bbe587"
+  }
+}
+]

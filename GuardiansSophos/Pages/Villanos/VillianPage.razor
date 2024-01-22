@@ -1,0 +1,50 @@
+﻿@page "/villian"
+
+@using GuardiansSophos.Services.Interfaces;
+@using GuardiansSophos.Entities;
+@inject IVillianService _villainService;
+
+
+<PageTitle>Villians</PageTitle>
+
+<section>
+     <div style="background-color: rgba(0, 0, 0, 0.5);">
+    <h2 style="color:white">Villanos</h2>
+
+    <table class="table table-striped table-hover table-bordered" style="background-color:white">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Origen</th>
+                <th>Poder</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var villain in villainList)
+            {
+                <tr>
+                    <td>@villain.Name</td>
+                    <td>@villain.Origen</td>
+                    <td>@villain.Power</td>
+                    <th>
+                        <a style="border-radius: 20px" href="infoVillian/@villain.Id" class="btn btn-primary">
+                            Ver información del heroe
+                        </a>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+</section>
+
+@code
+{
+    List<Villain> villainList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        villainList = await _villainService.GetAll();
+    }
+}

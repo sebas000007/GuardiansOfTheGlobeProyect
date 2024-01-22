@@ -1,0 +1,50 @@
+[
+    {
+        "Name" : "Titan",
+        "Power": "Super fuerza",
+        "Origen": "Desconocido",
+        "Habbilities": [
+            {
+                "id": 1,
+                "Name": "Volar",
+                "Description": "Poder volar"
+            },
+            {
+                "id": 2,
+                "Name": "Super velocidad",
+                "Description": "Poder correr a diferentes velocidades"
+            }
+        ],
+        "Weaknesses" : [
+            {
+                "id": 1,
+                "Name": "Debilidad por el sol",
+                "Description": "cuando es de dia es mas debil de lo usual"
+            }
+        ]
+    },
+    {
+        "Name" : "Faced",
+        "Power": "Oscuridad",
+        "Origen": "Desconocido",
+        "Habbilities": [
+            {
+                "id": 1,
+                "Name": "Volar",
+                "Description": "Poder volar"
+            },
+            {
+                "id": 2,
+                "Name": "Envenamiento",
+                "Description": "Puede dar envenenar a sus enemigos y hacerlos dormir"
+            }
+        ],
+        "Weaknesses" : [
+            {
+                "id": 1,
+                "Name": "Debilidad por el sol",
+                "Description": "cuando es de dia es mas debil de lo usual"
+            }
+        ]
+    }
+]
