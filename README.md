@@ -1,8 +1,10 @@
-# *Guardians Of The Globe Proyect*
-## *Descripcion*
+# **Guardians Of The Globe Proyect**
+![Guardians]( https://imagecomics.com/legacy_images/blog_images/335834916022825.jpg)
+
+## **Descripcion**
 Aplicacion web para gestionar heroes y villanos del universo Guardians Of the Globe
 
-### *Funcionalidades*
+### **Funcionalidades**
 
 La aplicacion web tendra las siguientes funcionalidades:
 1. Conocer la información básica de los héroes (Nombre, edad, etc), habilidades, debilidades
