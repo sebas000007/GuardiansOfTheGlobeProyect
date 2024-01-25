@@ -31,3 +31,5 @@ relacionada a las peleas.
 10. Consultar información del patrocinador relacionado a un héroe con mayor monto.
 11. Organizar y agrupar héroes por edad (Adolescentes-mayores de edad).
 12. Consultar que villano ha perdido más contra un héroe adolescente.
+
+![Guardians]( https://github.com/sebas000007/GuardiansOfTheGlobeProyect/blob/main/Images/ClassDiagram.png?raw=true)
