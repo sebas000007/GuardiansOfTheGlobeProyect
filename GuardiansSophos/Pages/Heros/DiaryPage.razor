@@ -1,0 +1,50 @@
+﻿@page "/DiaryPage"
+
+@using GuardiansSophos.Services.Interfaces;
+@using GuardiansSophos.Entities;
+@inject IDiaryService _diaryService;
+
+<PageTitle> Diary </PageTitle>
+
+<section>
+    <div style="background-color: rgba(0, 0, 0, 0.5);">
+        <h2 style="color:white">Agenda</h2>
+
+        <table class="table table-striped table-hover table-bordered" style="background-color:white">
+            <thead>
+                <tr>
+                    <th>Hora Inicio</th>
+                    <th>Hora Fin</th>
+                    <th>Actividad</th>
+                    <th>Descripcion</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var diary in diaryList)
+                {
+                    <tr>
+                        <td>@diary.InitHour</td>
+                        <td>@diary.EndHour</td>
+                        <td>@diary.NameActivity</td>
+                        <td>@diary.Description</td>
+                        <th>
+                            <a style="border-radius: 20px" href="inforDiary/@diary.Id" class="btn btn-primary">
+                                Ver información de la agenda
+                            </a>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+@code
+{
+    List<Diary> diaryList = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        diaryList = await _diaryService.GetAll();
+    }
+}

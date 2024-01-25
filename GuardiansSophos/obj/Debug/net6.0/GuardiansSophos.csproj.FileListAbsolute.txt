@@ -301,3 +301,4 @@ C:\Users\Usuario\Desktop\GuardiansSophos\GuardiansSophos\obj\Debug\net6.0\refint
 C:\Users\Usuario\Desktop\GuardiansSophos\GuardiansSophos\obj\Debug\net6.0\GuardiansSophos.pdb
 C:\Users\Usuario\Desktop\GuardiansSophos\GuardiansSophos\obj\Debug\net6.0\GuardiansSophos.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\GuardiansSophos\GuardiansSophos\obj\Debug\net6.0\ref\GuardiansSophos.dll
+C:\Users\Usuario\Desktop\GuardiansSophos\GuardiansSophos\obj\Debug\net6.0\GuardiansSophos.sourcelink.json
