@@ -76,7 +76,7 @@ relacionada a las peleas.
 **12.** Consultar que villano ha perdido más contra un héroe adolescente.
 
 ## **PROTOTIPO UX/UI**
-<img src="https://github.com/sebas000007/GuardiansOfTheGlobeProyect/blob/main/Images/ProtoType_UXUI.png?raw=true" alt="Prototype" height="200">
+<img src="https://github.com/sebas000007/GuardiansOfTheGlobeProyect/blob/main/Images/ProtoType_UXUI.png?raw=true" alt="Prototype" height="300">
 
 
 
