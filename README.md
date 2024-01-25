@@ -12,10 +12,10 @@ Para configurar el entorno de desarrollo, sigue estos pasos:
 
 ## **ESTRUCTURA DEL PROYECTO**
 El proyecto está organizado en las siguientes carpetas y archivos principales:
-**Pages:** Contiene las páginas Razor correspondiente a la interfaz grafica (FrontEnd).
-**Services:** Implementan la lógica de negocio o la manipulación de datos en la aplicación. 
-**Models:** Contiene las clases de modelos para las entidades de la base de datos.
-**Entities:** Contiene los objetos principales de la aplicación, como datos que se almacenan y manipulan.
+- **Pages:** Contiene las páginas Razor correspondiente a la interfaz grafica (FrontEnd).
+- **Services:** Implementan la lógica de negocio o la manipulación de datos en la aplicación. 
+- **Models:** Contiene las clases de modelos para las entidades de la base de datos.
+- **Entities:** Contiene los objetos principales de la aplicación, como datos que se almacenan y manipulan.
 
 ## **CONFIGURACION DB:**
 - La base de datos esta alojada en el archivo "AppSettings.json"
