@@ -27,10 +27,16 @@ El proyecto está organizado en las siguientes carpetas y archivos principales:
 - **Fight:** Registra las peleas entre The Guardians y los villanos.
 - **Diary:** Registra las actividades de los heroes.
 
+### DIAGRAMA DE CLASES UML
 ![Guardians]( https://github.com/sebas000007/GuardiansOfTheGlobeProyect/blob/main/Images/ClassDiagram.png?raw=true)
 
-# **Funcionalidades**
-## *La aplicacion web tendra las siguientes funcionalidades:*
+## Scripts de creación y población de la base de datos
+- Se utilizaron archivos JSON para poder enviar los datos a la DataBase en la nube de MongoDB ATLAS
+- Los Xml estan alojados en la carpeta "JSON" del proyecto
+
+
+## **Funcionalidades**
+### *La aplicacion web tendra las siguientes funcionalidades:*
 
 1. Conocer la información básica de los héroes (Nombre, edad, etc), habilidades, debilidades
   y principales relaciones personales.
