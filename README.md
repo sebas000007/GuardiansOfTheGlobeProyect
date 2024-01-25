@@ -29,8 +29,8 @@ El proyecto está organizado en las siguientes carpetas y archivos principales:
 
 ![Guardians]( https://github.com/sebas000007/GuardiansOfTheGlobeProyect/blob/main/Images/ClassDiagram.png?raw=true)
 
-## **Funcionalidades**
-# *La aplicacion web tendra las siguientes funcionalidades:*
+# **Funcionalidades**
+## *La aplicacion web tendra las siguientes funcionalidades:*
 
 1. Conocer la información básica de los héroes (Nombre, edad, etc), habilidades, debilidades
   y principales relaciones personales.
